@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="screenTransitionDuration">250</integer>
+
+    <bool name="app_state_saving">false</bool>
+    <bool name="use_crashlytics">false</bool>
+    <bool name="use_stetho">false</bool>
+    <bool name="use_clustering">false</bool>
+</resources>

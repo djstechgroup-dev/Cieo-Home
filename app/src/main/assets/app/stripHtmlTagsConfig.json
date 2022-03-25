@@ -1,0 +1,45 @@
+{
+    "controlimage": [
+        {
+            "tag": "(?:(?!<img)[\\S\\s])*<img +((?!(?:(?:(?:width)|(?:height))=(?:\"|')?1(?:\"|')? ))[^>])*src[ ]*=[ ]*\"((https?|assets)[^\">]+)\"((?!(?:(?:(?:width)|(?:height))=(?:\"|')?1(?:\"|')? ))[^>])*>[\\S\\s]*",
+            "returnMatch": false,
+            "replaceWith": "$2"
+        },
+        {
+            "tag": "^(\\s*)?(((((blob:)?https?|assets):\\/\\/)|\\/)[-A-Z0-9+&@#\\/%?=~_|!:,.;]*[A-Z0-9+&@#\\/\\%=~_|])(\\s*)?$",
+            "returnMatch": true,
+            "replaceWith": "$2"
+        }
+    ],
+    "controltext": [
+        {
+            "tag": "<br />|<br>|<br/>|<p>|</p>",
+            "returnMatch": false,
+            "replaceWith": "\n"
+        },
+        {
+            "tag": "<\\/?[a-z][^>]*>",
+            "returnMatch": false,
+            "replaceWith": ""
+        }
+    ],
+    "url": [
+        {
+            "tag": "^[\\S\\s]*<a [^>]*href=\"([^\">]+)\"[^>]*>[\\S\\s]*$",
+            "returnMatch": false,
+            "replaceWith": "$1"
+        },
+        {
+            "tag": "^(\\s*)?((((https?|assets)://)|/)[-A-Z0-9+&@#/%?=~_|!:,.;]*[A-Z0-9+&@#/%=~_|])(\\s*)?$",
+            "returnMatch": true,
+            "replaceWith": "$2"
+        }
+    ],
+    "facebookurl": [
+        {
+            "tag": "url=([^&]*)",
+            "returnMatch": true,
+            "replaceWith": "$1"
+        }
+    ]
+}

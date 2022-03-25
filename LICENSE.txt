@@ -1,0 +1,17 @@
+Copyright (C) 2017, Kinetise Sp. z o.o.
+All rights reserved.
+
+The below terms apply to all files of Kinetise application source code package excluding third-party files licensed on their respective licenses.
+
+Use in source and binary forms and redistribution in binary form only, with or without modification, are permitted provided that the following conditions are met:
+   1. Neither the name of the copyright holder, Kinetise Sp. z o.o. nor Kinetise may be used to endorse or promote products derived from this software without specific prior written permission.
+   2. Redistribution of the binary form will have a form of mobile appplication executable package (*.ipa for iOS and *.apk for Android) and shall be limited to one instance (per platform). An instance shall be identified by its unique system identifier (bundle ID for iOS and package name for Android).
+   
+Redistribution of source code, in any form, is strictly forbidden without specific prior written permission.
+   
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+

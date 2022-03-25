@@ -1,0 +1,7 @@
+<resources>
+    <bool name="use_crashlytics">false</bool>
+    <bool name="use_stetho">true</bool>
+    <bool name="use_clustering">true</bool>
+    <string name="build_type">NON-VALIDATED</string>
+    <string name="build_type_appstore">NON-APPSTORE</string>
+</resources>

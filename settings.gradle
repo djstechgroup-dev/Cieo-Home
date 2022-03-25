@@ -1,0 +1,4 @@
+include ':facebook-android-sdk'
+project(':facebook-android-sdk').projectDir = new File(settingsDir, 'facebook-android-sdk/facebook')
+include ':Kinetise'
+include ':app'

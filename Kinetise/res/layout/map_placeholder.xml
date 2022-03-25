@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kinetise.data.systemdisplay.views.text.MapPlaceholderTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="256px" android:layout_height="256px"
+        android:background="#808080"
+        android:id="@+id/androidMapPlaceholder"
+        android:text="No Android API KEY"
+        android:textSize="40px"
+        android:gravity="center"
+        />

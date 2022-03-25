@@ -1,0 +1,5 @@
+<resources>
+    <bool name="use_crashlytics">true</bool>
+    <bool name="use_stetho">false</bool>
+    <bool name="use_clustering">true</bool>
+</resources>

@@ -1,0 +1,110 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'io.fabric.tools:gradle:1.21.5'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'me.tatarka.retrolambda'
+
+dependencies {
+    compile project(':Kinetise')
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true;
+    }
+
+    androidTestCompile('com.android.support.test.espresso:espresso-intents:2.2.1') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('org.mockito:mockito-core:1.10.19')
+    testCompile('org.mockito:mockito-core:1.10.19')
+    androidTestCompile "com.google.dexmaker:dexmaker:1.2"
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test:runner:0.5') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile('com.android.support.test:rules:0.3') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.2.0'
+    compile files('libs/spoon-client-1.7.0.jar')
+    testCompile 'org.robolectric:robolectric:3.1.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.squareup.duktape:duktape-android:1.0.0'
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile 'proguard-project.txt'
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+
+    productFlavors {
+        production {
+            manifestPlaceholders = [crashlyticsApiKey: "e28e9f7f100d349a745a5f728328f0a0cab0253f"]
+        }
+        staging {
+            manifestPlaceholders = [crashlyticsApiKey: "eff51f45b5b08619b3708efda3ca6a2f3cd4e7a7"]
+        }
+        development {
+            manifestPlaceholders = [crashlyticsApiKey: "d3ba90c38e3d5592cf78cc43ed7385faa2855769"]
+        }
+        local {
+            manifestPlaceholders = [crashlyticsApiKey: "d3ba90c38e3d5592cf78cc43ed7385faa2855769"]
+        }
+        espressoTest {
+            manifestPlaceholders = [crashlyticsApiKey: "d3ba90c38e3d5592cf78cc43ed7385faa2855769"]
+        }
+    }
+
+    dexOptions {
+        incremental true
+        preDexLibraries = false
+        jumboMode = true
+    }
+
+    sourceSets {
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+
+

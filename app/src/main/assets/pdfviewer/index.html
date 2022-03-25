@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="minimal.css"/>
+    <script type="text/javascript" src="compatibility.js"></script>
+
+    <script>
+        var url = "file:///" + function() {
+            var result;
+            tmp = [];
+            window.location.search.substr(1).split("&")
+                .forEach(function(item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === "url") result = decodeURIComponent(tmp[1]);
+                });
+            if(!result){
+                return "";
+            }
+            else{
+                return result;
+            }
+        }();
+    </script>
+</head>
+<body>
+<div>
+    <button id="prev" onclick="goPrevious()" class="button">Previous</button>
+    <button id="next" onclick="goNext()" class="button">Next</button>
+    <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+</div>
+
+<div>
+    <canvas id="the-canvas" ></canvas>
+</div>
+
+<script type="text/javascript" src="pdf.js"></script>
+<script type="text/javascript" src="customview.js">
+
+</script>
+</body>
+</html>

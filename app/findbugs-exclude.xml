@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <Match>
+        <Class name="~.*\.R\$.*"/>
+        <!--<Bug code="Nm"/>-->
+    </Match>
+    <Match>
+        <Class name="~.*\.RWrapper\$.*"/>
+        <Bug code="Nm"/>
+    </Match>
+
+    <!--<Match>-->
+        <!--<Class name="~.*\.R\$.*"/>-->
+        <!--<Bug code="Ms"/>-->
+    <!--</Match>-->
+    <!--<Match>-->
+        <!--<Class name="~.*\.RWrapper\$.*"/>-->
+        <!--<Bug code="Ms"/>-->
+    <!--</Match>-->
+    <!--<Match>-->
+        <!--<Class name="~.*\.RWrapper\$.*"/>-->
+        <!--<Bug code="Ms"/>-->
+    <!--</Match>-->
+    <Match>
+        <Class name="~.*\.Manifest\$.*"/>
+        <Bug code="Nm"/>
+    </Match>
+    <!--Bez sensu generowane zgłoszenie - finbugs nie jest idealny-->
+    <Match>
+        <Class name="~.*\.XmlAttributeStruct"/>
+
+    </Match>
+    <!--Kod na licencji Apache-->
+    <Match>
+        <Class name="~.*\.SntpClient"/>
+        <Bug code="Dm"/>
+    </Match>
+
+    <Match>
+        <Class name="~.*\.PersistentCache"/>
+    </Match>
+    <!--Findbugs nie obsługuje pewnych formatów w Stringach i się o to pulta-->
+    <Match>
+        <Class name="~.*\.LocationHelper"/>
+        <Bug pattern="VA_FORMAT_STRING_EXTRA_ARGUMENTS_PASSED"/>
+    </Match>
+    <!--Nie ruszajmy synchronizacji w feedloaderze- Mateusz ja przemyslał, ale nie zdradził-->
+    <Match>
+        <Class name="~.*\.FeedLoader"/>
+        <Or>
+            <Bug code="Wa"/>
+            <Bug pattern="UW_UNCOND_WAIT"/>
+        </Or>
+    </Match>
+    <!--Kodowanie jest dla tego przypadku okreslane póżniej w feedloaderze(?)-->
+    <Match>
+        <Class name="com.kinetise.data.sourcemanager.HttpSourceDownloadRunnable"/>
+        <Bug code="Dm"/>
+    </Match>
+    <Match>
+        <Or>
+            <Class name="com.kinetise.helpers.xPath.XpathParser"/>
+            <Class name="com.kinetise.helpers.parser.XpathFeedParserHandler"/>
+        </Or>
+        <Bug code="Dm"/>
+    </Match>
+
+</FindBugsFilter>

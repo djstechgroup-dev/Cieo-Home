@@ -1,0 +1,21 @@
+<resources>
+    <string name="push_project_id"></string>
+    <string name="facebookApplicationId"></string>
+    <string name="google_sign_in_client_id"></string>
+    <string name="push_google_project_number"></string>
+    <string name="push_registration_url">http://push.funandmobile.com/default/index/c2dmregister</string>
+
+    <string name="fb_auth_url">https://graph.facebook.com/oauth/access_token</string>
+    <string name="fb_client_id_key"></string>
+    <string name="fb_client_id_value"></string>
+    <string name="fb_client_secret_key"></string>
+    <string name="fb_client_secret_value"></string>
+
+    <string name="twitter_key"></string>
+    <string name="twitter_secret"></string>
+
+    <string name="linkedin_key"></string>
+    <string name="linkedin_secret"></string>
+
+    <string name="map_key"></string>
+</resources>

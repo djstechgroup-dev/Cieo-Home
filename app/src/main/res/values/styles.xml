@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+
+    <style name="KinetiseTheme" parent="AppTheme">
+        <!--Jesli windowIsTransluecent jest ustawione na true, to na galaxy Y na standardowym launcherze nie obraca sie ekran
+        w kinetise. Najprawdopodobniej jest to spowodowane pobieraniem stanu z aplikacji "pod spodem". Jesli zainstaluje sie
+        Launcher Pro, to ekran obraca sie normalnie.  -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

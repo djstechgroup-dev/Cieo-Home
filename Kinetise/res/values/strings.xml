@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="app_name">Kinetise</string>
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Wartosc niepotrzebna przy lokalnym uruchomieniu -->
+    <string name="image_placeholderError">error.png</string>
+    <string name="image_placeholderLoading">loading.png</string>
+    <string name="image_placeholderMap">error.png</string>
+    <string name="image_placeholderQR">qr.png</string>
+    <string name="curtain_image">loading.png</string>
+
+    <!-- Wartosc niepotrzebna przy lokalnym uruchomieniu -->
+    <string name="developer_assets_prefix">app</string>
+
+    <!-- Wersje poszczegolnych modulow bioracych udzial w budowaniu aplikacji -->
+    <string name="compilation">1.0</string>
+    <string name="blowjobber_version">1.0</string>
+    <string name="descriptor_compiler_version">1.0</string>
+    <string name="permission_manager_version">1.0</string>
+    <string name="compilator_version">1.0</string>
+
+    <string name="compilation_date">01.01.2000</string>
+    <string name="xml_date">01.01.2000</string>
+    <string name="blowjobber_date">01.01.2000</string>
+    <string name="code_date">01.01.2000</string>
+    <string name="descriptor_compiler_date">01.01.2000</string>
+
+</resources>
